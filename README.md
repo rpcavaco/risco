@@ -2,24 +2,26 @@
 
 This is the hub repository for **RISCO Web Maps (V2[^1])** libraries and server software.
 
-**RISCO Web Maps** is a generic browser-based 2D GIS data visualization and editing solution oriented for responsiveness and mobile support.
+**RISCO Web Maps** is a generic browser-based 2D GIS data visualisation and editing solution oriented for responsiveness and mobile support.
 
 ## Why RISCO
+
+Central objective of creating RISCO: provide direct read and write web access to PostGIS tables.
 
 Publishing web maps on wide available JS API's like [Leaflet](https://leafletjs.com/) or [OpenLayers](https://openlayers.org/) is a client-side only out-of-the-box solution to straightaway display GIS data.
 
 After having your web map published like that, you might stumble into some difficulties:
-- usually you will rely on some thrid party WFS or WMS layers provider infraestructure for which you have limited or no admin access and you cannot easily adapt or customize it to your needs;
-- widgeting: you will be wondering for out-of-the-box functionality beyond feature popups like, e.g., *table of contents*, base map swapping etc.;
-- you might need to edit data and you might want to do it fully realtime, either on desktop or on mobile, having edits reflected on published maps without delay - existing libraries do provide base functionality for this but you must know how to, and put some effort to, properly wire it to an available geo web services provider infrastructure.
+- usually you will rely on some third party WFS or WMS layers provider infrastructure for which you have limited or no admin access and you cannot easily adapt or customise it to your needs;
+- widgeting: you will be wondering for out-of-the-box functionality beyond feature popups like, e.g., *table of contents*, base map swapping, measuring tools, etc.;
+- you might need to edit data and you might want to do it fully real-time, either on desktop or on mobile, having edits reflected on published maps without delay - existing libraries do provide base functionality for this but you must know how to, and put some effort to, properly wire it to an available geo web services provider infrastructure.
 
-RISCO tries to address these needs, providing basic client-side functionality out-of-the-box combined with rich server side funcionality and a tight coupling between both, client and server sides of your solution.
+RISCO tries to address these needs, providing basic out-of-the-box client-side functionality combined with rich server side functionality and a tight coupling between both, client and server sides of your solution.
 
 ## What RISCO is not 
 
-Both Leaflet and OpenLayers are seasoned client libraries, offering coordinate system transforms[^2], a profusion of modern data source support from the likes of Mapbox or CartoDB, a huge range of extended visualization functionality, and extendability through a plugin architecture (Leaflet).
+Both Leaflet and OpenLayers are seasoned client libraries, offering coordinate system transforms[^2], a profusion of modern data source support from the likes of Mapbox or CartoDB, a huge range of extended visualisation functionality, and extensibility through a plugin architecture (Leaflet).
 
-The funcionality RISCO offers is not JavaScript centric, instead it heavily relies on the very rich server-side functionality of PostGIS.
+The functionality RISCO offers is not JavaScript centric, instead it heavily relies on the very rich server-side PostGIS functions.
 
 An example: clustering or binning of point features. This functionality is still on the making but it will rely solely on calling PostGIS clustering functions.
 
@@ -49,6 +51,16 @@ Editing is only supported on RISCO's own layers.
 Raster is only supported through WMS (not yet through WMTS).
 
 Starting soon: implementing reading support for **[OGC API -Features](https://ogcapi.ogc.org/features/)**
+
+### Coordinate systems
+
+RISCO does not transform coordinate systems (CS) in client. 
+
+RISCO was devised for low scale work (higher detail). It is supposed to work only with plane coordinates.
+
+WMS, WFS or ArcGIS services used must allow for the CS defined in map config. 
+
+RISCO own layers, if not in map's CS, are automatically transformed through PostGIS.
 
 ### Webmap configuring and styling
 
@@ -109,4 +121,4 @@ Other software dependencies exist solely on RISCO Server Golang, namely:
 
 [^1]: V2 stands for "Version 2": current RISCO evolved from a much more limited preceding package.
 
-[^2]: RISCO JS client provides no coordinate transforms funcionality.
+[^2]: RISCO JS client provides no coordinate transforms functionality.
