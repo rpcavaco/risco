@@ -1,6 +1,6 @@
 # RISCO
 
-This is the hub repository for **RISCO Web Maps (V2[¹])** libraries and server software.
+This is the hub repository for **RISCO Web Maps (V2[^1])** libraries and server software.
 
 **RISCO Web Maps** is a generic browser-based 2D GIS data visualization and editing solution oriented for responsiveness and mobile support.
 
@@ -17,7 +17,7 @@ RISCO tries to address these needs, providing basic client-side functionality ou
 
 ## What RISCO is not 
 
-Both Leaflet and OpenLayers are seasoned client libraries, offering coordinate system transforms[²], a profusion of modern data source support from the likes of Mapbox or CartoDB, a huge range of extended visualization functionality, and extendability through a plugin architecture (Leaflet).
+Both Leaflet and OpenLayers are seasoned client libraries, offering coordinate system transforms[^2], a profusion of modern data source support from the likes of Mapbox or CartoDB, a huge range of extended visualization functionality, and extendability through a plugin architecture (Leaflet).
 
 The funcionality RISCO presently offers is not Javascript centric, instead it heavily relies on the very rich server-side functionality of PostGIS.
 
@@ -77,6 +77,6 @@ Other software dependencies exist solely on RISCO Server Golang, namely:
 
 **Notes**
 
-[¹]: V2 stands for "Version 2": current RISCO evolved from a much more limited preceding package which served as a training ground for this one.
+[^1]: V2 stands for "Version 2": current RISCO evolved from a much more limited preceding package which served as a training ground for this one.
 
-[²]: RISCO JS client provides no coordinate transforms funcionality.
+[^2]: RISCO JS client provides no coordinate transforms funcionality.
