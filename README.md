@@ -17,6 +17,8 @@ After having your web map published like that, you might stumble into some diffi
 
 RISCO tries to address these needs, providing basic out-of-the-box client-side functionality combined with rich server side functionality and a tight coupling between both, client and server sides of your solution.
 
+RISCO was devised to work at larger scales, for municpalities or regions, providing a reliable editing environment. For this, RISCO is prepared to use plane coordinates used on larger scale cartography. For many reasons, usual  Web Mercator EPSG:3857 coordinate system should be avoided. 
+
 ## What RISCO is not 
 
 Both Leaflet and OpenLayers are seasoned client libraries, offering coordinate system transforms[^2], a profusion of modern data source support from the likes of Mapbox or CartoDB, a huge range of extended visualisation functionality, and extensibility through a plugin architecture (Leaflet).
@@ -45,7 +47,7 @@ All vectors can exhibit "map tip" behaviour: the display of a lightweight popup 
 
 - RISCO own vector layers (serving any PostGIS geometry-enabled table)
 - OGC WMS or WFS layers
-- ArcGIS Server feature layers
+- ArcGIS Server layers (MapServer - including Query layer - and ImageServer)
 
 Editing is only supported on RISCO's own layers. 
 Raster is only supported through WMS (not yet through WMTS).
@@ -64,18 +66,19 @@ RISCO own layers, if not in map's CS, are automatically transformed through Post
 
 ### Webmap configuring and styling
 
-Configuring ....
+Configuring is provided on JSON files.
+Styling is achieved with parameters similar to CSS. 
+
+Out of the box,it allows for info-style or maptip-style popups and interactive table of contents (TOC).
 
 
 ### Geometry editing
 
-### Mobile interaction modes
+RISCO provides tools for geometry editing.
 
-### Relationships between vector features
+### Dashboarding and slicing
 
-bla bla ...
-
-### Dashboarding
+Work is underway to get simple dashboard functionality and siliging filtering using graphic widgets sucha as treemaps, etc.
 
 
 ## Components
@@ -99,7 +102,6 @@ Each of these components and example applications is hosted on it's own GitHub r
 | RISCO js V2 | [rpcavaco/riscojs_v2](https://github.com/rpcavaco/riscojs_v2) | ES6 ECMAScript / JavaScript (plain, no third party dependencies) |
 | RISCO Server V2 | [rpcavaco/riscosrv_v2](https://github.com/rpcavaco/riscosrv_v2) | Golang using FastHTTP library |
 | RISCO Server PG V2 | [rpcavaco/riscosrv_v2_pg](https://github.com/rpcavaco/riscosrv_v2_pg) | PL/pgSQL |
-| RISCO page | TBD | HTML, CSS, JavaScript |
 | RISCO webapp | TBD | Python 3, HTML, CSS, JavaScript |
 
 
@@ -107,12 +109,16 @@ Each of these components and example applications is hosted on it's own GitHub r
 
 **RISCO Web Maps** has a single platform dependency on **PostgreSQL / PostGIS**. 
 
-Other software dependencies exist solely on RISCO Server Golang, namely:
+Other software dependencies exist on RISCO Server, namely:
 
 - jackc/pgx (PostgreSQL driver)
 - valyala/fasthttp (FastHTTP implementation)
 
+Demo web app is built on Python framework FastAPI
+
 ## Installation
+
+(instructions to be provided)
 
 
 -----
