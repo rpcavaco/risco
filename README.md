@@ -145,7 +145,22 @@ To run workshop container bundle, you need to:
 1. have Docker in your system
 2. choose a folder as workspace
 3. in your chosen workspace, download both files found [here](OGC_ASF_Workshop_Evora_2024)
+4. Extract 'cont_shared_folders.zip', creating a folder with same name
+5. Making shure you have 'compose.yaml' in your workspace, open a terminal and type
+
+		docker-compose --project-name risco_workshop up
  
+to see logs in interactive terminal, or run it detached using   
+
+		docker-compose --project-name risco_workshop up -d
+
+To stop it, if using interactive terminal, you must first type Ctrl-C in it.
+
+To completely stop and clean containers and volumes, type:
+
+		docker-compose --project-name risco_workshop down -v
+
+
 -----
 
 **Notes**
