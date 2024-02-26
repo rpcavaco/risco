@@ -126,7 +126,9 @@ Demo web app is built on Python framework FastAPI
 
 ## Installation
 
-(instructions to be provided)
+Please access each of the components repositories to find installation instructions.
+
+There is also a Docker container "compose" configuration prepared for [OGC-ASF Joint Code Sprint 2024 workshop](#risco-workshop) 
 
 
 -----
