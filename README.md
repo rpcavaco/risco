@@ -4,6 +4,14 @@ This is the hub repository for **RISCO Web Maps (V2[^1])** libraries and server 
 
 **RISCO Web Maps** is a generic browser-based 2D GIS data visualisation and editing solution oriented for responsiveness and mobile support.
 
+-------
+
+**RISCO Workshop - Mentor Streams OGC-ASF Codesprint Evora 2024**
+
+Please, follow this [link](#risco-workshop) to find the workshop materials.
+
+-------
+
 ## Why RISCO
 
 Central objective of creating RISCO: provide direct read and write web access to PostGIS tables.
@@ -58,7 +66,7 @@ Starting soon: implementing reading support for **[OGC API -Features](https://og
 
 RISCO does not transform coordinate systems (CS) in client. 
 
-RISCO was devised for low scale work (higher detail). It is supposed to work only with plane coordinates.
+RISCO was devised for higher scale work (higher detail). It is supposed to work only with plane coordinates.
 
 WMS, WFS or ArcGIS services used must allow for the CS defined in map config. 
 
@@ -121,6 +129,23 @@ Demo web app is built on Python framework FastAPI
 (instructions to be provided)
 
 
+-----
+
+## Risco Workshop
+
+**RISCO Workshop - Mentor Streams OGC-ASF Codesprint Evora 2024**
+
+Slides are located [here](https://docs.google.com/presentation/d/1jw2zNSeX8iBuVtAlq6LxXecfri2DPuM9QaScz8g4wxY/edit?usp=sharing).
+
+> [!WARNING]  
+> Workshop containers are not ready for Windows environment, due to the use of unsupported --net=host parameter
+
+To run workshop container bundle, you need to:
+
+1. have Docker in your system
+2. choose a folder as workspace
+3. in your chosen workspace, download both files found [here](OGC_ASF_Workshop_Evora_2024)
+ 
 -----
 
 **Notes**
