@@ -1,12 +1,15 @@
 # RISCO
 
-This is the hub repository for **RISCO Web Maps (V2[^1])** libraries and server software.
+This is the hub repository for **RISCO Web Maps (V2[^1])** client libraries and server software.
 
 **RISCO Web Maps** is a generic browser-based 2D GIS data visualisation and editing solution oriented for responsiveness and mobile support.
 
--------
+After reading this introductory README, you'll need to know how to get started. If it's not your first time here, you'll also need aditional information. Please check this project Wiki [here](https://github.com/rpcavaco/risco.wiki.git).
 
 **RISCO Workshop - Mentor Streams OGC-ASF Codesprint Evora 2024**
+-------
+
+
 
 Please, follow this [link](#risco-workshop) to find the workshop materials.
 
