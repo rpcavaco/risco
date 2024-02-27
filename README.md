@@ -60,7 +60,7 @@ All vectors can exhibit "map tip" behaviour: the display of a lightweight popup 
 Editing is only supported on RISCO's own layers. 
 Raster is only supported through WMS (not yet through WMTS).
 
-Starting soon: implementing reading support for **[OGC API -Features](https://ogcapi.ogc.org/features/)**
+Starting soon: implementing reading support for **[OGC API - Maps](https://ogcapi.ogc.org/maps/)**
 
 ### Coordinate systems
 
