@@ -15,6 +15,15 @@ Please, follow this [link](#risco-workshop) to find the workshop materials.
 
 -------
 
+## What is RISCO
+
+- is a tightly coupled server  + client solution
+- communication between server and client is based on a compressed GeoJSON - like protocol (looking for implementing it in upcoming JSON-FG standard)
+- allows for the publishing of PostGIS tables, enabled by merely filling an entry in a metadata table 
+- work is being done to make it a comfortable graphic editing environment
+- RISCO is being added a collection of widgets
+- RISCO is also being added some dashboarding items
+
 ## Why RISCO
 
 Central objective of creating RISCO: provide direct read and write web access to PostGIS tables.
