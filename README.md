@@ -142,7 +142,6 @@ Please access each of the components repositories to find installation instructi
 
 There is also a Docker container "compose" configuration prepared for [OGC-ASF Joint Code Sprint 2024 workshop](#risco-workshop) 
 
-
 -----
 
 ## Risco Workshop
